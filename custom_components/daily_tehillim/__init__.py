@@ -1,0 +1,1 @@
+DOMAIN = "daily_tehillim"

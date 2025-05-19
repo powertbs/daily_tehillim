@@ -1,0 +1,11 @@
+{
+  "domain": "daily_tehillim",
+  "name": "Daily Tehillim",
+  "version": "1.0.0",
+  "documentation": "https://github.com/powertb/daily_tehillim",
+  "dependencies": [],
+  "codeowners": ["@powertbs"],
+  "requirements": [],
+  "iot_class": "local_polling",
+  "icon": "icon.png"
+}

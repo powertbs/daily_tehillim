@@ -1,0 +1,7 @@
+{
+  "name": "Daily Tehillim",
+  "content_in_root": false,
+  "domains": ["sensor"],
+  "country": "worldwide",
+  "homeassistant": "2022.0.0"
+}

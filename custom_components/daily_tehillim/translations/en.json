@@ -1,0 +1,10 @@
+{
+  "state": {
+    "sensor": {
+      "daily_tehillim": {
+        "name": "Daily Tehillim",
+        "state": "Tehillim portion"
+      }
+    }
+  }
+}

@@ -7,5 +7,6 @@
   "requirements": ["hdate==0.9.3"],
   "codeowners": ["@powertbs"],
   "iot_class": "calculated",
-  "icon": "icon.png"
+  "icon": "icon.png",
+  "platforms": ["sensor"]
 }

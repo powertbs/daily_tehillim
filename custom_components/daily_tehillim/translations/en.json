@@ -1,10 +1,23 @@
 {
-  "state": {
-    "sensor": {
-      "daily_tehillim": {
-        "name": "Daily Tehillim",
-        "state": "Tehillim portion"
+  "config": {
+    "step": {
+      "user": {
+        "title": "Daily Tehillim Setup",
+        "description": "Choose your Tehillim schedule style.",
+        "data": {
+          "schedule_type": "Schedule Type"
+        }
       }
+    },
+    "options": {
+      "schedule_type": "Schedule Type"
+    }
+  },
+  "options": {
+    "schedule_type": {
+      "5_per_day": "5 Chapters Per Day",
+      "monthly": "Yom LaChodesh",
+      "weekly": "Yom Tehillim (Weekly)"
     }
   }
 }

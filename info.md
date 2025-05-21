@@ -1,5 +1,7 @@
 # Daily Tehillim
 
+![Daily Tehillim Icon](icon.png)
+
 This Home Assistant custom integration provides a daily Tehillim (Psalms) reading cycle based on your selected schedule:
 
 ### 🔄 Supported Schedules:
@@ -11,4 +13,3 @@ This Home Assistant custom integration provides a daily Tehillim (Psalms) readin
 
 No YAML required — fully installable through HACS config flow.
 
----

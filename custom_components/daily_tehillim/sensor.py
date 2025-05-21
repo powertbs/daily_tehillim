@@ -1,9 +1,12 @@
+import logging
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.core import HomeAssistant
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from .schedules import get_today_portion
+
+_LOGGER = logging.getLogger(__name__)
 
 
 class DailyTehillimSensor(SensorEntity):
@@ -14,9 +17,16 @@ class DailyTehillimSensor(SensorEntity):
         self._attr_unique_id = "daily_tehillim"
         self._attr_should_poll = False
         self._attr_native_value = None
+        self._attr_entity_registry_enabled_default = True  # Ensure sensor is enabled by default
 
     async def async_update(self) -> None:
-        self._attr_native_value = get_today_portion(self._schedule_type)
+        try:
+            portion = get_today_portion(self._schedule_type)
+            _LOGGER.debug("Tehillim portion for '%s': %s", self._schedule_type, portion)
+            self._attr_native_value = portion
+        except Exception as e:
+            _LOGGER.error("Failed to calculate Tehillim portion: %s", e)
+            self._attr_native_value = None
 
 
 async def async_setup_entry(
@@ -26,4 +36,5 @@ async def async_setup_entry(
 ) -> None:
     schedule_type = entry.data.get("schedule_type", "5_per_day")
     async_add_entities([DailyTehillimSensor(hass, schedule_type)])
+
 

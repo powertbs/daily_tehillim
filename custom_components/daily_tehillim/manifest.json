@@ -1,10 +1,9 @@
 {
   "domain": "daily_tehillim",
   "name": "Daily Tehillim",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "config_flow": true,
   "documentation": "https://github.com/powertbs/daily_tehillim",
-  "requirements": ["hdate==0.9.3"],
   "codeowners": ["@powertbs"],
   "iot_class": "calculated",
   "icon": "icon.png",
